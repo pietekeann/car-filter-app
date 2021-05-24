@@ -16,6 +16,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 This application links to the Vehicle API provided by NHTSA: https://vpic.nhtsa.dot.gov/api/.
 
-To filter data use the ### `car make` Car Make Input, the Dropdown Box for Car Type and choose a Year with the Slider.
+To filter data use the `car make`, `car type`, `year slider` inputs which will dynamically contact the API to retrieve data.
 
 If no input is present for the Car Make it will default to the last made query.
