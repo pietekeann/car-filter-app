@@ -4,6 +4,16 @@
     flex: 30%;
   }
   
+.header {
+  background-color: #9db740;
+  color:white;
+}
+
+.header .content h3 {
+  color:white;
+  text-transform: uppercase;
+}
+
   .content {
     text-align: center;
     padding: 1rem;

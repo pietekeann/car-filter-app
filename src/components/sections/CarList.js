@@ -18,6 +18,7 @@ const List = {
           id={car.Model_ID}
           name={car.Make_Name}
           model_name={car.Model_Name}
+          type={props.type}
         />
       ))}
     </ul>

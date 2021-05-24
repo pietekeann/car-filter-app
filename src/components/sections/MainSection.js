@@ -37,8 +37,10 @@ function MainSection(props) {
   return (
     <Fragment>
     {/* Filter Section */}
-      <section className={classes.background}>
-        <h1 className={classes.h1}>Filter Car Types</h1>
+      <section className={classes.filter}>
+      <div className={classes.container}>
+
+        <h1 className={classes.h1}>Vehicle API</h1>
         <div className={classes.flex}>
           <div className={classes.flexitem}>
             <h3>Car Make</h3>
@@ -53,9 +55,14 @@ function MainSection(props) {
             <ContinuousSlider handler={handleYear} />
           </div>
         </div>
+        </div>
       </section>
     {/* Results Section */}
-      <CarSection make={make} type={type} year={year} />
+    <section className={classes.results}>
+      <div className={classes.container}>
+    <CarSection make={make} type={type} year={year} />
+      </div>
+    </section>
     </Fragment>
   );
 }

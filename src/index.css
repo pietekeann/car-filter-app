@@ -1,21 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
-  background-color: #f6ffcc;
+  background-color: white;
 }
 
 h1 {
   font-size: 2.5rem;
   color: #2c292b;
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
 }
 
 h2 {
   font-size: 1.5rem;
   color: #2c292b;
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
 }

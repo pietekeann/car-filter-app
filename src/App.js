@@ -3,9 +3,11 @@ import MainSection from './components/sections/MainSection';
 
 function App() {
   return (
-  <Layout>
     <MainSection/>
-  </Layout>);
+  // <Layout>
+    
+  // </Layout>);
+  );
 }
 
 export default App;

@@ -7,7 +7,12 @@ function CarSection(props) {
 
   const Center = {
     textAlign: "center",
+    color: "white",
   };
+
+  const noResults = {
+    color: "black",
+  }
 
   React.useEffect(() => {
     let formatType = props.type.replace(/\s/g, "%20");
@@ -25,15 +30,6 @@ function CarSection(props) {
         if (response.status == 404) {
           console.log("404 error");
         }
-        console.log(
-          "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeYear/make/" +
-          props.make +
-            "/modelyear/" +
-            props.year.toString() +
-            "/vehicletype/" +
-            formatType +
-            "?format=json"
-        );
         return response.json();
       })
       .then((data) => {
@@ -46,6 +42,7 @@ function CarSection(props) {
     return (
       <div style={Center}>
         <br />
+        <br />
         <img
           src="https://www.xenren.co/loader.gif"
           alt="loading..."
@@ -57,7 +54,7 @@ function CarSection(props) {
 
   let data = <p></p>;
   if (loadedCars.length == 0) {
-    data = <p>No Results Found</p>;
+    data = <h3 style={noResults}>No Results Found</h3>;
   }
 
   return (
@@ -66,7 +63,7 @@ function CarSection(props) {
         <br />
         {data}
       </div>
-      <CarList cars={loadedCars} />
+      <CarList cars={loadedCars} type={props.type} />
     </section>
   );
 }
